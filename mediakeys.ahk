@@ -10,7 +10,7 @@ SetWorkingDir, %A_ScriptDir%
 Spotify := new Program("spotify.exe", "Chrome_RenderWidgetHostHWND1")
 
 ; To get most spotify native shortcuts:
-; In Spotify, press CTRL + / (with Englisch keyboard layout)
+; In Spotify, press CTRL + / (with English keyboard layout)
 ; In Spotify, press CTRL + # (with German keyboard layout)
 
 +Media_Play_Pause::Spotify.press("{Space}") ; Shift + Media_Play_Pause: Play/Pause
@@ -25,7 +25,7 @@ Spotify := new Program("spotify.exe", "Chrome_RenderWidgetHostHWND1")
 
 +Media_Prev::Spotify.rapidPress("+{Left}""^{Left}","1""2") ; Shift + Media_Prev: Seek backward (1x), Backskip (2x)
 
-+Media_Next::Spotify.rapidPress("+{Right}""^{Right}","1""2") ; Shift + Media_Prev: Seek backward (1x), Backskip (2x)
++Media_Next::Spotify.rapidPress("+{Right}""^{Right}","1""2") ; Shift + Media_Prev: Seek forward (1x), Skip (2x)
 
 ;+NumpadDiv::Spotify.pressSequence() ; Shift + Numpad_Divide: Add song to playlist
 
