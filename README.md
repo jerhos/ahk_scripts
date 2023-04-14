@@ -16,6 +16,12 @@
 * [ ] Try out a workaround for the Firefox bug
 * [ ] Get [tray_remove.ahk](tray_remove.ahk) to work again (via dll call?)
 
+## License
+
+All files  are licensed under the [MIT License](LICENSE) unless otherwise stated. Feel free to use them as you wish.
+
+The files in the [lib](/lib/) folder are licensed under their respective licenses.
+
 ___
 
 <sup id="footnote_1">1</sup> Note that this is bugged. Sometimes the window is not brought to the foreground.
