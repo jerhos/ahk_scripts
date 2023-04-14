@@ -1,4 +1,4 @@
-# My Personal AutoHotkey Scripts
+# My Personal AutoHotkey v.2 Scripts
 
 ## Contents
 
