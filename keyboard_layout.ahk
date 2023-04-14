@@ -1,5 +1,6 @@
 ; This is a small file for making the German ISO keyboard layout a bit more programming friendly.
 ; Because AltGr on the number row is a royal knucklefuck.
+; =========================
 #Requires Autohotkey >=v2.0
 #SingleInstance Force
 #NoTrayIcon
@@ -18,7 +19,7 @@ SetWorkingDir(A_ScriptDir)
 ; Backslash
 +8:: SendText("\") ; Shift+8 -> "\"
 
-; Remove Keys from original location
+; Remove keybindings from original location
 <^>!7:: SendText("") ; AltGr+7 -> ""
 <^>!8:: SendText("") ; AltGr+8 -> ""
 <^>!9:: SendText("") ; AltGr+9 -> ""

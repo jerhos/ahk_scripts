@@ -1,4 +1,15 @@
 ; Removing unwanted Systemtray icon from iCUE but keeping the battery info
+; Not working with the current version of Windows 11
+; =========================
+#Requires Autohotkey >=v2.0
+#SingleInstance Force
+; #NoTrayIcon
+#Warn
+SetWorkingDir(A_ScriptDir)
+
+#Include .\lib\TrayIcon.ahk
+
+
 info := TrayIcon_GetInfo("iCUE.exe")
 loop info.MaxIndex()
 {
