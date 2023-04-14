@@ -9,7 +9,7 @@
     - Trigger MS PowerToys Run
     - Open Playnite
 * [Keyboard Layout Modifications](keyboard_layout.ahk)
-* [Tray Icon Removal](tray_remove.ahk) [<sup>2</sup>](#footnote_2)
+* [~~Tray Icon Removal~~](tray_remove.ahk) [<sup>2</sup>](#footnote_2)
 
 ## TODO
 
