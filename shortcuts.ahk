@@ -5,23 +5,33 @@
 #NoTrayIcon
 ; #Warn
 SetWorkingDir(A_ScriptDir)
+DetectHiddenWindows(true)
 
-; App paths
-bin := "::{645ff040-5081-101b-9f08-00aa002f954e}"
-spotify := A_AppData "\Spotify\Spotify.exe"
-playnite := RegExReplace(A_AppData, "\\Roaming" , "\Local\Playnite\Playnite.DesktopApp.exe")
-powertoysRun := "^!{Space}"
-firefox := A_ComSpec ' /c ""C:\Program Files\Firefox Nightly\firefox.exe" "-new-tab" "-foreground" "moz-extension://19b084f2-f170-46ec-a8ea-1ff6586eb3ce/index.html""' ; ^1
+#Include ".\lib\programs.ahk"
+
+; Apps
+bin             := _Bin()
+firefox         := _Firefox()
+playnite        := _Playnite()
+powertoysRun    := _PowerToysRun()
+spotify         := _Spotify()
 
 ; Shortcuts
-RWin:: Send(powertoysRun)
-#F:: Run(firefox, , "Hide")
-#S:: Run(spotify)
-#B:: Run(bin)
-#P:: Run(playnite)
-
 ; ------------------------
-; ^1: Firefox
-;    Open via cmdline to get access to "-new-tab" and "-foreground" params.
-;    "moz-extension://[...]" is in my case the URI for Tabliss, which I use as my new tab page.
-;    You can get it via dev tools. If you use the default, leave it empty.
+#B::        bin.Run()
+#F::        firefox.Run()
+#P::        playnite.Run()
+RWin::      powertoysRun.Do("Open Search")
+
+#S::        spotify.Run()
+; Ctrl Layer
+^Insert::   spotify.Do("Previous Track")
+^Home::     spotify.Do("Play/Pause")
+^PgUp::     spotify.Do("Next Track")
+^Delete::   spotify.Do("Volume Down")
+^End::      spotify.Do("Shuffle")
+^PgDn::     spotify.Do("Volume Up")
+; Shift Layer
++Insert::   spotify.Do("Seek Backward")
++PgUp::     spotify.Do("Seek Forward")
++End::      spotify.Do("Repeat")
