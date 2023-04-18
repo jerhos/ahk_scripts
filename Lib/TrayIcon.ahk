@@ -1,4 +1,4 @@
-; ported to AHK v2.0-beta by @krasnovpro
+; ported to AHK v2.0-beta by @krasnovpro 
 ; https://www.autohotkey.com/boards/viewtopic.php?f=6&t=1229
 
 ; ----------------------------------------------------------------------------------------------------------------------
