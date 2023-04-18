@@ -1,5 +1,7 @@
 # My Personal AutoHotkey v.2 Scripts
 
+Making them public in case anyone else finds them useful.
+
 ## Contents
 
 * [Shortcuts](shortcuts.ahk)
